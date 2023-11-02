@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IOT SMART HOME</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0px;
+            font-size: 14px;
+            color: #fff;
+            background-color: #007BFF;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Nuhi's IOT SMART HOME</h1>
+        <h2>Sensor Status</h2>
+        <table>
+            <tr>
+                <th>Button</th>
+                <td>{{ button }}</td>
+            </tr>
+            <tr>
+                <th>Motion</th>
+                <td>{{ senPIR }}</td>
+            </tr>
+            <tr>
+                <th>Temperature</th>
+                <td>{{ temperature }}</td>
+            </tr>
+            <tr>
+                <th>Humidity</th>
+                <td>{{ humidity }}</td>
+            </tr>
+        </table>
+
+        <h2>Actuator Status</h2>
+        <table>
+            <tr>
+                <th>Home Office Light</th>
+                <td>{{ ledRed }}</td>
+                <td><a href="/ledRed/on" class="button">Turn On</a></td>  
+                <td><a href="/ledRed/off" class="button">Turn Off</a></td>  
+            </tr>
+            <tr>
+                <th>Ventilator</th>
+                <td>{{ ledYlw }}</td>
+                <td><a href="/ledYlw/on" class="button">Turn On</a></td>  
+                <td><a href="/ledYlw/off" class="button">Turn Off</a></td>  
+            </tr>
+            <tr>
+                <th>Stove</th>
+                <td>{{ ledGrn }}</td>
+                <td><a href="/ledGrn/on" class="button">Turn On</a></td>  
+                <td><a href="/ledGrn/off" class="button">Turn Off</a></td>  
+            </tr>
+
+        </table>
+
+    </div>
+
+</body>
+
+</html>
